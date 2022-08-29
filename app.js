@@ -1,11 +1,12 @@
 // 
 
 function compra(){
-let articulos = prompt(`Seleccione el producto que desea comprar
-1: Remera
-2: Pantalon
-3: Campera
-4: Zapatillas`);
+
+    let articulos = prompt(`Seleccione el producto que desea comprar:
+    1: Remera
+    2: Pantalon
+    3: Campera
+    4: Zapatillas`);
 
 
 switch (articulos){
@@ -31,28 +32,31 @@ switch (articulos){
     break
 }
 
-if (articulos != null) {
+if (articulos != null && (articulos == 1 ||
+    articulos == 2 ||
+    articulos == 3 ||
+    articulos == 4)) {
     const metodoPago = prompt(`Indique el metodo de pago:
-efectivo
-tarjeta
-cheque
-(por favor, en minuscula)`);
+    efectivo
+    tarjeta
+    cheque
+    (por favor, en minuscula)`);
 
-if (metodoPago == "efectivo" ||
-metodoPago == "tarjeta" ||
-metodoPago == "cheque"){
-    alert(`Has pagado con ${metodoPago}`);
-    console.log(`Has pagado con ${metodoPago}`);
-    alert("Compra exitosa! Muchas gracias por comprar con nosotros!");
-    console.log("Compra exitosa!");
-} else {
-    alert("No ingreso datos correctos");
-    console.log("No ingreso datos correctos");
-}
+    if (metodoPago == "efectivo" ||
+        metodoPago == "tarjeta" ||
+        metodoPago == "cheque"){
+            alert(`Has pagado con ${metodoPago}`);
+            console.log(`Has pagado con ${metodoPago}`);
+            alert("Compra exitosa! Muchas gracias por comprar con nosotros!");
+            console.log("Compra exitosa!");
+    } else {
+        alert("No ingreso datos correctos");
+        console.log("No ingreso datos correctos");
+    }
 } else {
     alert("Al no elegir una de las opciones, no podemos continuar");
 }
 
 }
 
-asa();
+compra();
