@@ -11,19 +11,19 @@ function compra(){
 
 switch (articulos){
     case "1":
-        alert("El precio de la remera es $1200.");
+        alert("El precio de la remera es $1200. Haga click en Aceptar para pasar al Metodo de Pago.");
         console.log("Remera $1200");
     break
     case "2": 
-        alert("El precio del pantalon es $3500.");
+        alert("El precio del pantalon es $3500. Haga click en Aceptar para pasar al Metodo de Pago.");
         console.log("Pantalon $3500");
     break
     case "3":
-        alert("El precio de la campera es $5700.");
+        alert("El precio de la campera es $5700. Haga click en Aceptar para pasar al Metodo de Pago.");
         console.log("Campera $5700");
     break
     case "4":
-        alert("El precio de las zapatillas es $12000.");
+        alert("El precio de las zapatillas es $12000. Haga click en Aceptar para pasar al Metodo de Pago.");
         console.log("Zapatillas $12000");
     break
     default:
