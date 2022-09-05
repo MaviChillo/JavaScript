@@ -1,11 +1,40 @@
 // 
 
-const productos = [
-    {id: 1, producto: "remera", precio:1200},
-    {id: 2, producto: "pantalon", precio: 3500},
-    {id: 3, producto: "campera", precio: 5700},
-    {id: 4, producto: "zapatillas", precio: 12000}
+const remeras = [
+    {id: 1, producto: "remera red cross", precio: 2500},
+    {id: 2, producto: "remera the fighter", precio: 2500},
+    {id: 3, producto: "remera album art", precio: 2500},
+    {id: 4, producto: "remera phantom tomorrow", precio: 2500}
 ]
+
+const buzos = [
+    {id: 1, producto: "buzo blessed and cursed", precio: 5500},
+    {id: 2, producto: "buzo phantom tomorrow", precio: 5500},
+    {id: 3, producto: "buzo scarlet cross", precio: 5500},
+    {id: 4, producto: "buzo wounds", precio: 5500}
+]
+
+const discos = [
+    {id: 1, producto: "vinilo phantom tomorrow", precio: 2600},
+    {id: 2, producto: "cd phantom tomorrow", precio: 1200},
+    {id: 3, producto: "cd wretched and divine", precio: 1000},
+    {id: 4, producto: "vinilo re-stitch these wounds", precio: 2500}
+]
+
+const accesorios = [
+    {id: 1, producto: "buttons born again", precio: 1000},
+    {id: 2, producto: "patches phantom tomorrow", precio: 2000},
+    {id: 3, producto: "beanie black veil brides", precio: 3000},
+    {id: 4, producto: "necklace black veil brides", precio: 2000}
+]
+
+const productos = [
+    {id: 1, producto: remeras},
+    {id: 2, producto: buzos},
+    {id: 3, producto: discos},
+    {id: 4, producto: accesorios}
+]
+
 
 console.log(productos.length)
 
