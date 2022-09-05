@@ -1,0 +1,72 @@
+// about y discography
+
+/* about */
+
+.header4{
+	width: 100%;
+}
+
+.about{
+	margin: 30px;
+}
+
+.members{
+	display: flex;
+	flex-direction: row;
+	flex-flow: row;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	ul{
+		margin-top: 0;
+		h2{
+			margin-left: 0;
+		}
+		li{
+			width: 90%;
+			margin-top: 20px;
+		}
+	}
+	.header7{
+		width: 50%;
+		margin: 20px;
+		margin-left: 50px;
+	}
+}
+
+.ul1{
+	margin: 20px;
+}
+
+
+
+/* discography */
+
+.ul2{
+	margin: 20px;
+	.li1{
+		img{
+			margin-top: 10px;
+			height: 200px;
+			}
+		margin-bottom: 30px;
+		a{
+			text-decoration: none;
+			color: $white;
+			img{
+				height: 200px;
+			}
+			&:hover{
+				cursor: pointer;
+				color: $key;
+			}
+		}
+		p{
+			margin-top: 30px;
+		}
+		ol{
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}

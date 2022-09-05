@@ -1,0 +1,32 @@
+// contact
+
+
+/* contact */
+
+.sectionForm{
+	@include d-flex(column, left, baseline);
+	h2{
+		font-size: map-get($map:$txtSize, $key: 'md');
+		width: 70%;
+		margin-top: 0;
+		margin-right: 100px;
+	}
+	.form{
+		@include d-flex(column, left, baseline);
+		margin-left: 50px;
+		.email{
+			margin-top: 30px;
+		}
+		.label1{
+			margin-top: 30px;
+			width: 70%;
+		}
+		button{
+			margin-top: 20px;
+			@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+		}
+		p{
+			margin-top: 30px;
+		}
+	}
+}

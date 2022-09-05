@@ -1,0 +1,86 @@
+//home
+
+
+/* TABLE */
+
+#shows{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	.upShows__h1--center{
+		text-align: center;
+	}
+	.comeLive__p--center{
+		text-align: center;
+	}
+	.moreShows__h2--center{
+		text-align: center;
+	}
+	.table{
+		background-color: $black;
+		color: $white;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		padding: 20px;
+		border: solid $key 2px;
+		width: 80%;
+		height: auto;
+		th{
+			padding: 20px;
+			text-align: center;
+		}
+		td button{
+			color: $white;
+			&:hover{
+				cursor: pointer;
+				color: $key;
+			}
+		}
+	}
+}
+
+
+
+
+/* form subscribe */
+
+.input-group{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	color: $white;
+	font-style: bold;
+	font-family: 'Cinzel Decorative', bold;
+	font-size: map-get($map:$txtSize, $key: 'md');
+	width: 70%;
+	margin: 10% 15%;
+	#subs{
+		padding-left: 120px;
+		.btn-outline-red{
+			@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+		}
+	}	
+}
+
+
+/* video */
+
+.video{
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	margin: 5% 17%;
+	.embed-responsive-item{
+	width: 100%;
+	margin: 5% auto;
+	}
+}
+
+

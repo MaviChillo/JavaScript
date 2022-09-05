@@ -1,0 +1,67 @@
+// merch
+
+.cart{
+	display: flex;
+	justify-content: flex-end;
+	margin: 10px;
+	width: 100%;
+	a{
+		width: 5%;
+		.img{
+			width: 50%;
+		}
+	}
+}
+
+
+/* figures */
+
+.section{
+	display: flex;
+	figure{
+		a{
+			text-decoration: none;
+			color: $white;
+			&:hover{
+				color: $key;
+			}
+		}	
+		&:hover{
+			transform: scale(1.17);
+			color: $key;
+			font-weight: 600;
+			cursor: pointer;
+		}
+		img{
+			width: 250px;
+		}
+	}
+	.price{
+		text-align: center;
+	}
+}
+
+ 
+
+.shirts{
+	flex-direction: row;
+	justify-content: space-evenly;
+	flex-flow: row wrap;
+	align-items: center;
+	width: 97%;
+	text-align: center;
+}
+
+.hoodies{
+	@extend .shirts
+}
+
+.vinilos-y-cds{
+	@extend .shirts
+}
+
+
+.accesorios{
+	@extend .shirts
+}
+

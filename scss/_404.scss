@@ -1,0 +1,21 @@
+// 404 
+
+/* error 404 */
+
+.error404{
+	background-image: url(../img/bg/bg-band2.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	background-size: cover;
+	@include d-flex(column, center, center);
+	section{
+		@include d-flex(column, center, center);
+		h2{
+			font-size: map-get($map:$txtSize, $key: 'lg');
+		}	
+		button{
+			margin-top: 20px;
+			@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+		}
+	}
+}

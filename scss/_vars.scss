@@ -1,0 +1,55 @@
+// vars
+
+// colors
+
+//black
+$black: #000000;
+
+//white
+$white: #FFFFFF;
+
+//gray
+$gray: #191919;
+
+//darkred
+$key: rgba(139, 0, 0, 1);
+
+
+// mixins
+
+@mixin d-flex($direction, $justify, $align){
+	display: flex;
+	flex-direction: $direction;
+	justify-content: $justify;
+	align-items: $align;
+}
+
+@mixin button-outline-variant(
+   $color,
+   $outline-color,
+   $color-hover: color-contrast($color),
+   $active-background: $color,
+   $active-border: $color,
+   $background-color: $background, ) {
+
+  color: $color;
+  border-color: $outline-color;
+  background-color: $background;
+
+  &:hover {
+    color: $color-hover;
+    background-color: $active-background;
+    border-color: $active-border;
+  }
+
+}
+
+$background: transparent;
+
+
+/* disclaimer */
+
+.disclaimer{
+  display: none;
+}
+

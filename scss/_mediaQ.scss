@@ -1,0 +1,720 @@
+// media queries
+
+/* media queries */
+
+@media (min-width: 280px) and (max-width: 320px){
+
+	/* nav */
+
+	.navbar{
+		.navbar-brand{
+			width: 200%;
+			.encabezado__img{
+			width: 170px;
+			}
+		}
+		.nav-item{
+			width: 100%;
+		}
+	}
+
+	/* home */
+
+	.table{
+		font-size: map-get($map:$txtSize, $key: 'sm');
+		padding: none;
+		.btn{
+			font-size: map-get($map:$txtSize, $key: 'sm');
+		}
+	}
+
+
+	.input-group{ 
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 10px 0;
+		}
+		#subs{
+			padding: 0;
+			margin: 0;
+			width: 200%;
+			.form-control{
+				width:100%;
+			}
+			.btn{
+				padding: auto 0;
+				width:100%;
+			}
+		}
+	}
+
+	.video{
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+
+
+	/* about */
+
+	.members{
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 20px;
+	ul{
+		margin-top: 0;
+		h2{
+			margin-left: 0;
+		}
+		li{
+			width: 90%;
+			margin-top: 20px;
+		}
+	}
+	.header7{
+		width: 90%;
+		margin: 20px;
+		margin-left: 20px;
+	}
+}
+
+
+	/* merch */
+
+	#header1{
+		width: 100%;
+		margin-top: 0;
+	}
+
+
+
+	.section{
+		figure{
+		display: flex;
+		flex-direction: column;
+		margin-left: 10px;
+		width: 90%;
+			img{
+				width: 250%;
+				margin: 0;
+			}
+			figcaption{
+				margin-top: 20px;
+			}
+			.price{
+				text-align: center;
+			}
+		}
+	}
+
+	
+	.shirts{
+		flex-direction: column;
+		width: 90%;
+		text-align: center;
+ 		margin: 20px auto;
+		margin-top: 50px;
+ 	}
+
+ 	/* contact */
+
+ 	.sectionForm{
+		h2{
+			font-size: map-get($map:$txtSize, $key: 'md');
+			width: 90%;
+		}
+		.form{
+			margin-left: 30px;
+			.email{
+				margin-top: 30px;
+			}
+			.label1{
+				margin-top: 30px;
+				width: 90%;
+			}
+			.textArea{
+ 				width: 90%;
+ 			}
+			button{
+				margin-top: 20px;
+				@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+			}
+			p{
+				margin-top: 30px;
+			}
+		}
+	}
+
+
+}
+
+
+@media (min-width: 321px) and (max-width: 480px){
+
+	/* nav */
+
+	.navbar{
+		width: 100%;
+		.navbar-brand{
+			width: 200%;
+			.encabezado__img{
+			width: 200px;
+			}
+		}
+		.nav-item{
+			width: 100%;
+		}
+	}
+
+	/* home */
+
+	.carousel{
+		width: 100%;
+	}
+
+
+	.table{
+		font-size: map-get($map:$txtSize, $key: 'md');
+		padding: none;
+		.btn{
+			font-size: map-get($map:$txtSize, $key: 'md');
+		}
+	}
+
+
+	.input-group{ 
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 10px 0;
+		}
+		#subs{
+			padding: 0;
+			margin: 0;
+			width: 200%;
+		}
+	}
+
+
+	.video{
+		margin-top: 60px;
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+
+	/* about */
+
+	.members{
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		ul{
+			margin-top: 0;
+			h2{
+				margin-left: 0;
+			}
+			li{
+				width: 90%;
+				margin-top: 20px;
+			}
+		}
+		.header7{
+			width: 90%;
+			margin: 20px;
+			margin-left: 20px;
+		}
+	}
+
+	/* merch */
+
+	#header1{
+		width: 115%;
+		margin-top: 0;
+	}
+
+
+	.section{
+		figure{
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+			width: 100%;
+			img{
+				width: 250%;
+			}
+			figcaption{
+				margin-top: 20px;
+			}
+			.price{
+				text-align: center;
+			}
+		}
+	}
+
+
+	.shirts{
+		flex-direction: column;
+		width: 60%;
+		text-align: center;
+		margin: 20px auto;
+		margin-top: 50px;
+	}
+
+
+	/* contact */
+
+ 	.sectionForm{
+		h2{
+			font-size: map-get($map:$txtSize, $key: 'md');
+			width: 90%;
+		}
+		.form{
+			margin-left: 30px;
+			.email{
+				margin-top: 30px;
+			}
+			.label1{
+				margin-top: 30px;
+				width: 90%;
+			}
+			.textArea{
+ 				width: 90%;
+ 			}
+			button{
+				margin-top: 20px;
+				@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+			}
+			p{
+				margin-top: 30px;
+			}
+		}
+	}
+}
+
+
+@media (min-width: 481px) and (max-width: 600px){
+	
+	/* nav */
+
+	.navbar-brand{
+		width: 300%;
+		.encabezado__img{
+			width: 200px;
+		}
+	}
+
+
+	/* home */
+
+	.table{
+		font-size: map-get($map:$txtSize, $key: 'md');
+		width: 100%;
+	}
+
+	.input-group{
+		h3{
+			text-align: center;
+		}
+		#subs{
+			padding: 0;
+			margin: 0;
+			width: 200%;
+		}
+	}
+
+
+	.video{
+		margin-top: 60px;
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+
+
+	/* about */
+
+	.members{
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		ul{
+			margin-top: 0;
+			h2{
+				margin-left: 0;
+			}
+			li{
+				width: 90%;
+				margin-top: 20px;
+			}
+		}
+		.header7{
+			width: 90%;
+			margin: 20px;
+			margin-left: 20px;
+		}
+	}
+
+
+	/* merch */
+
+	#header1{
+		width: 100%;
+		margin-top: 0;
+	}
+
+
+	.section {
+		figure{
+			display: flex;
+			flex-direction: column;
+			margin-left: 20px;
+			margin-bottom: 50px;
+			img{
+				width: 250%;
+			}
+			figcaption{
+				margin-top: 20px;
+				font-size: map-get($map:$txtSize, $key: 'md');
+			}
+			.price{
+				text-align: center;
+				font-size: map-get($map:$txtSize, $key: 'md');
+			}
+		}
+	}
+
+
+
+	.shirts{
+		flex-direction: column;
+		width: 60%;
+		text-align: center;
+		margin: 20px auto;
+		margin-top: 50px;
+	}
+
+
+	/* contact */
+
+ 	.sectionForm{
+		h2{
+			font-size: map-get($map:$txtSize, $key: 'md');
+			width: 90%;
+		}
+		.form{
+			margin-left: 30px;
+			.email{
+				margin-top: 30px;
+			}
+			.label1{
+				margin-top: 30px;
+				width: 90%;
+			}
+			.textArea{
+ 				width: 90%;
+ 			}
+			button{
+				margin-top: 20px;
+				@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+			}
+			p{
+				margin-top: 30px;
+				margin-right: 20px;
+			}
+		}
+	}
+
+
+}
+
+
+@media (min-width: 601px) and (max-width: 768px){
+
+	/* nav */
+
+	.navbar-brand{
+		width: 300%;
+		.encabezado__img{
+			width: 200px;
+		}
+	}
+
+
+	/* home */
+
+	.table{
+		font-size: map-get($map:$txtSize, $key: 'md');
+		width: 100%;
+	}
+
+	.input-group{
+		h3{
+			text-align: center;
+		}
+		#subs{
+			padding: 0;
+			margin: 0;
+			width: 2000px;
+		}
+	} 
+
+	
+	.video{
+		margin-top: 60px;
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+
+
+	/* about */
+
+	.members{
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		ul{
+			margin-top: 0;
+			h2{
+				margin-left: 0;
+			}
+			li{
+				width: 90%;
+				margin-top: 20px;
+			}
+		}
+		.header7{
+			width: 90%;
+			margin: 20px;
+			margin-left: 20px;
+		}
+	}
+
+
+	/* merch */
+
+	#header1{
+		width: 100%;
+		margin-top: 0;
+	}
+
+
+	.section{
+		figure{
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 20px;
+			img{
+				width: 100%;
+			}
+			figcaption{
+				width: 100%;
+				margin-top: 20px;
+				font-size: map-get($map:$txtSize, $key: 'lg');
+			}
+			.price{
+				text-align: left;
+				margin-left: 255px;
+				font-size: map-get($map:$txtSize, $key: 'lg');
+			}
+		}
+	}
+
+
+
+	.shirts{
+		flex-wrap: wrap;
+		width: 80% ;
+		text-align: center;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		margin: 20px auto;
+		margin-top: 50px;
+	}
+
+	/* contact */
+
+ 	.sectionForm{
+		h2{
+			font-size: map-get($map:$txtSize, $key: 'md');
+			width: 90%;
+		}
+		.form{
+			margin-left: 30px;
+			.email{
+				margin-top: 30px;
+			}
+			.label1{
+				margin-top: 30px;
+				width: 90%;
+			}
+			.textArea{
+ 				width: 90%;
+ 			}
+			button{
+				margin-top: 20px;
+				@include button-outline-variant ($white, $key, $white, $key, $key, $black);
+			}
+			p{
+				margin-top: 30px;
+				margin-right: 20px;
+			}
+		}
+	}
+
+}
+
+
+
+@media (min-width: 769px) and (max-width: 1024px){
+
+	/* nav */
+
+	.navbar{ 
+		ul{ 
+			li{
+				width: 50px;
+				padding: 0;
+			}
+		}		
+		.navbar-brand{
+			width: 200%;
+			.encabezado__img{
+				width: 200px;
+			}
+		}
+	}
+
+
+	/* home */
+
+	.table{
+		font-size: map-get($map:$txtSize, $key: 'md');
+		width: 100%;
+	}
+
+	.input-group{
+		h3{
+			text-align: center;
+		}
+		#subs{
+			padding: 0;
+			margin: 0;
+		}
+	} 
+
+
+	.video{
+		margin-top: 60px;
+		h3{
+			text-align: center;
+			padding: 0;
+			margin: 20px 0;
+		}
+	}
+
+
+	/* about */
+
+	.members{
+		display: flex;
+		flex-direction: row;
+		flex-flow: row wrap;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 20px;
+		ul{
+			margin-top: 0;
+			h2{
+				margin-left: 0;
+			}
+			li{
+				width: 90%;
+				margin-top: 20px;
+			}
+		}
+		.header7{
+			width: 90%;
+			margin: 20px;
+			margin-left: 20px;
+		}
+	}
+
+
+	/* merch */
+
+	#header1{
+		width: 100%;
+		margin-top: 0;
+	}
+
+
+
+	.section{
+	 	figure{
+			display: flex;
+			flex-wrap: wrap;
+			margin-left: 50px;
+			width: 40%;
+			img{
+				width: 100%;
+			}
+			figcaption{
+				width: 67vw;
+				margin-top: 20px;
+				font-size: map-get($map:$txtSize, $key: 'md');
+			}
+			.price{
+				text-align: left;
+				margin-left: 140px;
+			}
+		}
+	}	
+	
+
+	.shirts{
+		flex-wrap: wrap;
+		width: 80% ;
+		text-align: center;
+		justify-content: space-between;
+		align-items: center;
+		align-content: center;
+		margin: 20px auto;
+		margin-top: 50px;
+	}
+
+
+	/* contact */
+
+ 	.sectionForm{
+		p{
+			margin-top: 30px;
+			margin-right: 30px;
+		}
+	}
+
+
+}
