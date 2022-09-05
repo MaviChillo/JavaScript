@@ -1,5 +1,12 @@
 // 
 
+const productos = [
+    {id: 1, producto: "remera", precio:1200},
+    {id: 2, producto: "pantalon", precio: 3500},
+    {id: 3, producto: "campera", precio: 5700},
+    {id: 4, producto: "zapatillas", precio: 12000}
+]
+
 function compra(){
 
     let articulos = prompt(`Seleccione el producto que desea comprar:
