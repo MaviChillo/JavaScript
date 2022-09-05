@@ -7,6 +7,8 @@ const productos = [
     {id: 4, producto: "zapatillas", precio: 12000}
 ]
 
+console.log(productos.length)
+
 function compra(){
 
     let articulos = prompt(`Seleccione el producto que desea comprar:
@@ -38,6 +40,7 @@ switch (articulos){
         console.log("No has introducido una opcion correcta");
     break
 }
+
 
 if (articulos != null && (articulos == 1 ||
     articulos == 2 ||
