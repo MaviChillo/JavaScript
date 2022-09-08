@@ -1,31 +1,31 @@
 // 
 
 const remeras = [
-    {id: 1, producto: "remera red cross", precio: 2500},
-    {id: 2, producto: "remera the fighter", precio: 2500},
-    {id: 3, producto: "remera album art", precio: 2500},
-    {id: 4, producto: "remera phantom tomorrow", precio: 2500}
+    {id: 1, producto: "Remera Red Cross", precio: 2500},
+    {id: 2, producto: "Remera The Fighter", precio: 2500},
+    {id: 3, producto: "Remera Album Art", precio: 2500},
+    {id: 4, producto: "Remera Phantom Tomorrow", precio: 2500}
 ]
 
 const buzos = [
-    {id: 1, producto: "buzo blessed and cursed", precio: 5500},
-    {id: 2, producto: "buzo phantom tomorrow", precio: 5500},
-    {id: 3, producto: "buzo scarlet cross", precio: 5500},
-    {id: 4, producto: "buzo wounds", precio: 5500}
+    {id: 1, producto: "Buzo Blessed and Cursed", precio: 5500},
+    {id: 2, producto: "Buzo Phantom Tomorrow", precio: 5500},
+    {id: 3, producto: "Buzo Scarlet Cross", precio: 5500},
+    {id: 4, producto: "Buzo Wounds", precio: 5500}
 ]
 
 const discos = [
-    {id: 1, producto: "vinilo phantom tomorrow", precio: 2600},
-    {id: 2, producto: "cd phantom tomorrow", precio: 1200},
-    {id: 3, producto: "cd wretched and divine", precio: 1000},
-    {id: 4, producto: "vinilo re-stitch these wounds", precio: 2500}
+    {id: 1, producto: "Vinilo Phantom Tomorrow", precio: 2600},
+    {id: 2, producto: "Cd Phantom Tomorrow", precio: 1200},
+    {id: 3, producto: "Cd Wretched and Divine", precio: 1000},
+    {id: 4, producto: "Vinilo Re-stitch These Wounds", precio: 2500}
 ]
 
 const accesorios = [
-    {id: 1, producto: "buttons born again", precio: 1000},
-    {id: 2, producto: "patches phantom tomorrow", precio: 2000},
-    {id: 3, producto: "beanie black veil brides", precio: 3000},
-    {id: 4, producto: "necklace black veil brides", precio: 2000}
+    {id: 1, producto: "Buttons Born Again", precio: 1000},
+    {id: 2, producto: "Patches Phantom Tomorrow", precio: 2000},
+    {id: 3, producto: "Beanie Black Veil Brides", precio: 3000},
+    {id: 4, producto: "Necklace Black Veil Brides", precio: 2000}
 ]
 
 const productos = [
@@ -35,10 +35,16 @@ const productos = [
     {id: 4, producto: accesorios}
 ]
 
-console.log(productos.length)
-
+const carrito = []
+console.log(carrito)
+console.log(carrito.length)
 
 function compra(){
+
+let shirts;
+let hoodie;
+let cds;
+let accessories;
 
     let articulos = prompt(`Seleccione el tipo de producto que desea comprar:
     1: Remeras
@@ -49,28 +55,40 @@ function compra(){
 
 switch (articulos){
     case "1":
-        let remeras = prompt(`Seleccione la remera que desea comprar:
-        1: Remera Red Cross
-        2: Remera The Fighter
-        3: Remera Album Art
-        4: Remera Phantom Pomorrow`);
+        shirts = prompt(`Seleccione la remera que desea comprar:
+        1: ${remeras[0].producto}
+        2: ${remeras[1].producto}
+        3: ${remeras[2].producto}
+        4: ${remeras[3].producto}`);
 
-        switch (remeras) {
+        switch (shirts) {
             case "1":
-                alert("El precio de la Remera Red Cross es $2500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Remera Red Cross $2500");
+                alert(`El precio de la ${remeras[0].producto} es $${remeras[0].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${remeras[0].producto} $${remeras[0].precio}`);
+                carrito.push(2500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "2":
-                alert("El precio de la Remera The Fighter es $2500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Remera The Fighter $2500");
+                alert(`El precio de la ${remeras[1].producto} es $${remeras[1].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${remeras[1].producto} $${remeras[1].precio}`);
+                carrito.push(2500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "3":
-                alert("El precio de la Remera Album Art es $2500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Remera Album Art $2500");
+                alert(`El precio de la ${remeras[2].producto} es $${remeras[2].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${remeras[2].producto} $${remeras[2].precio}`);
+                carrito.push(2500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "4":
-                alert("El precio de la Remera Phantom Pomorrow es $2500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Remera Phantom Pomorrow $2500");
+                alert(`El precio de la ${remeras[3].producto} es $${remeras[3].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${remeras[3].producto} $${remeras[3].precio}`);
+                carrito.push(2500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -79,28 +97,40 @@ switch (articulos){
         }
     break;
     case "2":
-        let buzos = prompt(`Seleccione el buzo que desea comprar:
-        1: Buzo Blessed and Cursed
-        2: Buzo Phantom Tomorrow
-        3: Buzo Scarlet Cross
-        4: Buzo Wounds`);
+        hoodie = prompt(`Seleccione el buzo que desea comprar:
+        1: ${buzos[0].producto}
+        2: ${buzos[1].producto}
+        3: ${buzos[2].producto}
+        4: ${buzos[3].producto}`);
 
-        switch (buzos) {
+        switch (hoodie) {
             case "1":
-                alert("El precio del Buzo Blessed and Cursed es $5500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Buzo Blessed and Cursed $5500");
+                alert(`El precio del ${buzos[0].producto} es $${buzos[0].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${buzos[0].producto} $${buzos[0].precio}`);
+                carrito.push(5500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "2":
-                alert("El precio del Buzo Phantom Tomorrow es $5500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Buzo Phantom Tomorrow $5500");
+                alert(`El precio del ${buzos[1].producto} es $${buzos[1].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${buzos[1].producto} $${buzos[1].precio}`);
+                carrito.push(5500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "3":
-                alert("El precio del Buzo Scarlet Cross es $5500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Buzo Scarlet Cross $5500");
+                alert(`El precio del ${buzos[2].producto} es $${buzos[2].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${buzos[2].producto} $${buzos[2].precio}`);
+                carrito.push(5500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "4":
-                alert("El precio del Buzo Wounds es $5500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Buzo Wounds $5500");
+                alert(`El precio del ${buzos[3].producto} es $${buzos[3].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${buzos[3].producto} $${buzos[3].precio}`);
+                carrito.push(5500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -109,28 +139,40 @@ switch (articulos){
         }
     break;
     case "3":
-        let discos = prompt(`Seleccione el disco que desea comprar:
-        1: Vinilo Phantom Tomorrow
-        2: CD Phantom Tomorrow
-        3: CD Wretched and Divine
-        4: Vinilo Re-stitch These Wounds`);
+        cds = prompt(`Seleccione el disco que desea comprar:
+        1: ${discos[0].producto}
+        2: ${discos[1].producto}
+        3: ${discos[2].producto}
+        4: ${discos[3].producto}`);
 
-        switch (discos) {
+        switch (cds) {
             case "1":
-                alert("El precio del Vinilo Phantom Tomorrow es $2600. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Vinilo Phantom Tomorrow $2600");
+                alert(`El precio del ${discos[0].producto} es $${discos[0].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${discos[0].producto} $${discos[0].precio}`);
+                carrito.push(2600)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "2":
-                alert("El precio del CD Phantom Tomorrow es $1200. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("CD Phantom Tomorrow $1200");
+                alert(`El precio del ${discos[1].producto} es $${discos[1].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${discos[1].producto} $${discos[1].precio}`);
+                carrito.push(1200)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "3":
-                alert("El precio del CD Wretched and Divine es $1000. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("CD Wretched and Divine $1000");
+                alert(`El precio del ${discos[2].producto} es $${discos[2].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${discos[2].producto} $${discos[2].precio}`);
+                carrito.push(1000)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "4":
-                alert("El precio del Vinilo Re-stitch These Wounds es $2500. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Vinilo Re-stitch These Wounds $2500");
+                alert(`El precio del ${discos[3].producto} es $${discos[3].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${discos[3].producto} $${discos[3].precio}`);
+                carrito.push(2500)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -139,28 +181,40 @@ switch (articulos){
         }
     break;
     case "4":
-        let accesorios = prompt(`Seleccione el accesorio que desea comprar:
-        1: Buttons Born Again
-        2: Patches Phantom Tomorrow
-        3: Beanie Black Veil Brides
-        4: Necklace Black Veil Brides`);
+        accessories = prompt(`Seleccione el accesorio que desea comprar:
+        1: ${accesorios[0].producto}
+        2: ${accesorios[1].producto}
+        3: ${accesorios[2].producto}
+        4: ${accesorios[3].producto}`);
 
-        switch (accesorios) {
+        switch (accessories) {
             case "1":
-                alert("El precio de los Buttons Born Again es $1000. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Buttons Born Again $1000");
+                alert(`El precio de los ${accesorios[0].producto} es $${accesorios[0].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${accesorios[0].producto} $${accesorios[0].precio}`);
+                carrito.push(1000)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "2":
-                alert("El precio de los Patches Phantom Tomorrow es $2000. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Patches Phantom Tomorrow $2000");
+                alert(`El precio de los ${accesorios[1].producto} es $${accesorios[1].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${accesorios[1].producto} $${accesorios[1].precio}`);
+                carrito.push(2000)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "3":
-                alert("El precio del Beanie Black Veil Brides es $3000. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Beanie Black Veil Brides $3000");
+                alert(`El precio del ${accesorios[2].producto} es $${accesorios[2].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${accesorios[2].producto} $${accesorios[2].precio}`);
+                carrito.push(3000)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             case "4":
-                alert("El precio del Necklace Black Veil Brides es $2000. Haga click en Aceptar para pasar al Metodo de Pago.");
-                console.log("Necklace Black Veil Brides $2000");
+                alert(`El precio del ${accesorios[3].producto} es $${accesorios[3].precio}. Haga click en Aceptar para continuar.`);
+                console.log(`${accesorios[3].producto} $${accesorios[3].precio}`);
+                carrito.push(2000)
+                console.log(carrito)
+                console.log(carrito.length)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -174,47 +228,56 @@ switch (articulos){
     break;
 }
 
+if ((shirts != null && shirts > 0 &&
+    shirts < 5) ||
+    ( hoodie != null && hoodie > 0 &&
+    hoodie < 5) ||
+    (cds > 0 && cds < 5 &&
+    cds != null) ||
+    (accessories > 0 && accessories < 5 && 
+    accessories != null)) {
 
-let agregar = prompt(`Agregar otro articulo?
+    let agregar = prompt(`Agregar otro articulo?
     Si
     No
     (por favor, en minuscula)`);
 
 
-switch (agregar) {
-    case "si":
-        compra()
-    break;
-    case "no":
-        if (articulos != null && (articulos == 1 ||
-            articulos == 2 ||
-            articulos == 3 ||
-            articulos == 4)) {
-                const metodoPago = prompt(`Indique el metodo de pago:
+    switch (agregar) {
+        case "si":
+            compra()
+        break;
+        case "no":
+            let resultado = carrito.reduce((accum, carrito) => {
+                return accum + carrito})
+                console.log(resultado)
+            const metodoPago = prompt(`Su total es de $${resultado}. Indique el metodo de pago:
             efectivo
             tarjeta
             cheque
             (por favor, en minuscula)`);
         
-            if (metodoPago == "efectivo" ||
-                metodoPago == "tarjeta" ||
-                metodoPago == "cheque"){
-                    alert(`Has pagado con ${metodoPago}`);
-                    console.log(`Has pagado con ${metodoPago}`);
-                    alert("Compra exitosa! Muchas gracias por comprar con nosotros!");
-                    console.log("Compra exitosa!");
-            } else {
-                alert("No ingreso datos correctos");
-                console.log("No ingreso datos correctos");
-            }
-        } else {
-            alert("Al no elegir una de las opciones, no podemos continuar");
-        }
-    break;
-    default:
-        alert("No ingreso datos correctos");
-        console.log("No ingreso datos correctos");
-    break;
+                if (metodoPago == "efectivo" ||
+                    metodoPago == "tarjeta" ||
+                    metodoPago == "cheque"){
+                        alert(`Has pagado con ${metodoPago}`);
+                        console.log(`Has pagado con ${metodoPago}`);
+                        alert("Compra exitosa! Muchas gracias por comprar con nosotros!");
+                        console.log("Compra exitosa!");
+                } else {
+                    alert("No ingreso datos correctos");
+                    console.log("No ingreso datos correctos");
+                }
+        break;
+        default:
+            alert("No ingreso datos correctos");
+            console.log("No ingreso datos correctos");
+        break;
+    }
+
+} else {
+    alert("No se pudo completar la compra");
+    console.log("No se pudo completar la compra");
 }
 
 }
