@@ -39,6 +39,7 @@ const carrito = []
 console.log(carrito)
 console.log(carrito.length)
 
+
 function compra(){
 
 let shirts;
@@ -65,28 +66,28 @@ switch (articulos){
             case "1":
                 alert(`El precio de la ${remeras[0].producto} es $${remeras[0].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${remeras[0].producto} $${remeras[0].precio}`);
-                carrito.push(2500)
+                carrito.push(parseInt(`${remeras[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "2":
                 alert(`El precio de la ${remeras[1].producto} es $${remeras[1].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${remeras[1].producto} $${remeras[1].precio}`);
-                carrito.push(2500)
+                carrito.push(parseInt(`${remeras[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "3":
                 alert(`El precio de la ${remeras[2].producto} es $${remeras[2].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${remeras[2].producto} $${remeras[2].precio}`);
-                carrito.push(2500)
+                carrito.push(parseInt(`${remeras[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "4":
                 alert(`El precio de la ${remeras[3].producto} es $${remeras[3].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${remeras[3].producto} $${remeras[3].precio}`);
-                carrito.push(2500)
+                carrito.push(parseInt(`${remeras[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
@@ -107,28 +108,28 @@ switch (articulos){
             case "1":
                 alert(`El precio del ${buzos[0].producto} es $${buzos[0].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${buzos[0].producto} $${buzos[0].precio}`);
-                carrito.push(5500)
+                carrito.push(parseInt(`${buzos[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "2":
                 alert(`El precio del ${buzos[1].producto} es $${buzos[1].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${buzos[1].producto} $${buzos[1].precio}`);
-                carrito.push(5500)
+                carrito.push(parseInt(`${buzos[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "3":
                 alert(`El precio del ${buzos[2].producto} es $${buzos[2].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${buzos[2].producto} $${buzos[2].precio}`);
-                carrito.push(5500)
+                carrito.push(parseInt(`${buzos[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "4":
                 alert(`El precio del ${buzos[3].producto} es $${buzos[3].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${buzos[3].producto} $${buzos[3].precio}`);
-                carrito.push(5500)
+                carrito.push(parseInt(`${buzos[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
@@ -149,28 +150,28 @@ switch (articulos){
             case "1":
                 alert(`El precio del ${discos[0].producto} es $${discos[0].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${discos[0].producto} $${discos[0].precio}`);
-                carrito.push(2600)
+                carrito.push(parseInt(`${discos[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "2":
                 alert(`El precio del ${discos[1].producto} es $${discos[1].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${discos[1].producto} $${discos[1].precio}`);
-                carrito.push(1200)
+                carrito.push(parseInt(`${discos[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "3":
                 alert(`El precio del ${discos[2].producto} es $${discos[2].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${discos[2].producto} $${discos[2].precio}`);
-                carrito.push(1000)
+                carrito.push(parseInt(`${discos[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "4":
                 alert(`El precio del ${discos[3].producto} es $${discos[3].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${discos[3].producto} $${discos[3].precio}`);
-                carrito.push(2500)
+                carrito.push(parseInt(`${discos[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
@@ -191,28 +192,28 @@ switch (articulos){
             case "1":
                 alert(`El precio de los ${accesorios[0].producto} es $${accesorios[0].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${accesorios[0].producto} $${accesorios[0].precio}`);
-                carrito.push(1000)
+                carrito.push(parseInt(`${accesorios[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "2":
                 alert(`El precio de los ${accesorios[1].producto} es $${accesorios[1].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${accesorios[1].producto} $${accesorios[1].precio}`);
-                carrito.push(2000)
+                carrito.push(parseInt(`${accesorios[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "3":
                 alert(`El precio del ${accesorios[2].producto} es $${accesorios[2].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${accesorios[2].producto} $${accesorios[2].precio}`);
-                carrito.push(3000)
+                carrito.push(parseInt(`${accesorios[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
             case "4":
                 alert(`El precio del ${accesorios[3].producto} es $${accesorios[3].precio}. Haga click en Aceptar para continuar.`);
                 console.log(`${accesorios[3].producto} $${accesorios[3].precio}`);
-                carrito.push(2000)
+                carrito.push(parseInt(`${accesorios[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
             break;
