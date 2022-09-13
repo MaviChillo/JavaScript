@@ -39,6 +39,7 @@ const carrito = []
 console.log(carrito)
 console.log(carrito.length)
 
+const carritoProductos = []
 
 function compra(){
 
@@ -69,6 +70,7 @@ switch (articulos){
                 carrito.push(parseInt(`${remeras[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${remeras[0].producto}` + " " + `$${remeras[0].precio}`)
             break;
             case "2":
                 alert(`El precio de la ${remeras[1].producto} es $${remeras[1].precio}. Haga click en Aceptar para continuar.`);
@@ -76,6 +78,7 @@ switch (articulos){
                 carrito.push(parseInt(`${remeras[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${remeras[1].producto}` + " " + `$${remeras[1].precio}`)
             break;
             case "3":
                 alert(`El precio de la ${remeras[2].producto} es $${remeras[2].precio}. Haga click en Aceptar para continuar.`);
@@ -83,6 +86,7 @@ switch (articulos){
                 carrito.push(parseInt(`${remeras[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${remeras[2].producto}` + " " + `$${remeras[2].precio}`)
             break;
             case "4":
                 alert(`El precio de la ${remeras[3].producto} es $${remeras[3].precio}. Haga click en Aceptar para continuar.`);
@@ -90,6 +94,7 @@ switch (articulos){
                 carrito.push(parseInt(`${remeras[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${remeras[3].producto}` + " " + `$${remeras[3].precio}`)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -111,6 +116,7 @@ switch (articulos){
                 carrito.push(parseInt(`${buzos[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${buzos[0].producto}` + " " + `$${buzos[0].precio}`)
             break;
             case "2":
                 alert(`El precio del ${buzos[1].producto} es $${buzos[1].precio}. Haga click en Aceptar para continuar.`);
@@ -118,6 +124,7 @@ switch (articulos){
                 carrito.push(parseInt(`${buzos[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${buzos[1].producto}` + " " + `$${buzos[1].precio}`)
             break;
             case "3":
                 alert(`El precio del ${buzos[2].producto} es $${buzos[2].precio}. Haga click en Aceptar para continuar.`);
@@ -125,6 +132,7 @@ switch (articulos){
                 carrito.push(parseInt(`${buzos[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${buzos[2].producto}` + " " + `$${buzos[2].precio}`)
             break;
             case "4":
                 alert(`El precio del ${buzos[3].producto} es $${buzos[3].precio}. Haga click en Aceptar para continuar.`);
@@ -132,6 +140,7 @@ switch (articulos){
                 carrito.push(parseInt(`${buzos[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${buzos[3].producto}` + " " + `$${buzos[3].precio}`)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -153,6 +162,7 @@ switch (articulos){
                 carrito.push(parseInt(`${discos[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${discos[0].producto}` + " " + `$${discos[0].precio}`)
             break;
             case "2":
                 alert(`El precio del ${discos[1].producto} es $${discos[1].precio}. Haga click en Aceptar para continuar.`);
@@ -160,6 +170,7 @@ switch (articulos){
                 carrito.push(parseInt(`${discos[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${discos[1].producto}` + " " + `$${discos[1].precio}`)
             break;
             case "3":
                 alert(`El precio del ${discos[2].producto} es $${discos[2].precio}. Haga click en Aceptar para continuar.`);
@@ -167,6 +178,7 @@ switch (articulos){
                 carrito.push(parseInt(`${discos[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${discos[2].producto}` + " " + `$${discos[2].precio}`)
             break;
             case "4":
                 alert(`El precio del ${discos[3].producto} es $${discos[3].precio}. Haga click en Aceptar para continuar.`);
@@ -174,6 +186,7 @@ switch (articulos){
                 carrito.push(parseInt(`${discos[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${discos[3].producto}` + " " + `$${discos[3].precio}`)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -195,6 +208,7 @@ switch (articulos){
                 carrito.push(parseInt(`${accesorios[0].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${accesorios[0].producto}` + " " + `$${accesorios[0].precio}`)
             break;
             case "2":
                 alert(`El precio de los ${accesorios[1].producto} es $${accesorios[1].precio}. Haga click en Aceptar para continuar.`);
@@ -202,6 +216,7 @@ switch (articulos){
                 carrito.push(parseInt(`${accesorios[1].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${accesorios[1].producto}` + " " + `$${accesorios[1].precio}`)
             break;
             case "3":
                 alert(`El precio del ${accesorios[2].producto} es $${accesorios[2].precio}. Haga click en Aceptar para continuar.`);
@@ -209,6 +224,7 @@ switch (articulos){
                 carrito.push(parseInt(`${accesorios[2].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${accesorios[2].producto}` + " " + `$${accesorios[2].precio}`)
             break;
             case "4":
                 alert(`El precio del ${accesorios[3].producto} es $${accesorios[3].precio}. Haga click en Aceptar para continuar.`);
@@ -216,6 +232,7 @@ switch (articulos){
                 carrito.push(parseInt(`${accesorios[3].precio}`))
                 console.log(carrito)
                 console.log(carrito.length)
+                carritoProductos.push(`${accesorios[3].producto}` + " " + `$${accesorios[3].precio}`)
             break;
             default:
                 alert("No ingresaste una opcion correcta");
@@ -237,6 +254,8 @@ if ((shirts != null && shirts > 0 &&
     cds != null) ||
     (accessories > 0 && accessories < 5 && 
     accessories != null)) {
+
+        console.log(carritoProductos)
 
     let agregar = prompt(`Agregar otro articulo?
     Si
@@ -265,6 +284,17 @@ if ((shirts != null && shirts > 0 &&
                         console.log(`Has pagado con ${metodoPago}`);
                         alert("Compra exitosa! Muchas gracias por comprar con nosotros!");
                         console.log("Compra exitosa!");
+
+                        let lista = document.querySelector("#listaCarrito");
+                        for (let carritoProducto of carritoProductos){
+                            let listado = document.createElement("ul");
+                            listado.innerHTML = carritoProducto
+                            lista.appendChild(listado);
+                            
+                            const textModify = document.querySelector(".aqui").textContent="Presione ENTER para borrar la lista."
+                            console.log(textModify)
+                            
+                        }
                 } else {
                     alert("No ingreso datos correctos");
                     console.log("No ingreso datos correctos");
@@ -280,6 +310,13 @@ if ((shirts != null && shirts > 0 &&
     alert("No se pudo completar la compra");
     console.log("No se pudo completar la compra");
 }
+
+//const enterDelete = document.querySelector("li")
+
+//enterDelete.addEventListener("keydown", () =>{
+//    const textDelete = document.querySelector("li")
+//    textDelete.remove()
+//})
 
 }
 
