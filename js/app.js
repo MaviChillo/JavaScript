@@ -287,7 +287,7 @@ if ((shirts != null && shirts > 0 &&
 
                         let lista = document.querySelector("#listaCarrito");
                         for (let carritoProducto of carritoProductos){
-                            let listado = document.createElement("ul");
+                            let listado = document.createElement("li");
                             listado.innerHTML = carritoProducto
                             lista.appendChild(listado);
                             
