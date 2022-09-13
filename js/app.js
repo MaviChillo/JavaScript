@@ -291,32 +291,39 @@ if ((shirts != null && shirts > 0 &&
                             listado.innerHTML = carritoProducto
                             lista.appendChild(listado);
                             
-                            const textModify = document.querySelector(".aqui").textContent="Presione ENTER para borrar la lista."
+                            const textModify = document.querySelector(".aqui").textContent="Presione ENTER para borrar la lista del carrito."
                             console.log(textModify)
                             
+                            addEventListener("keydown", () =>{
+                                document.querySelector("#listaCarrito").textContent = "Se ha borrado la lista. Para iniciar otra compra, presione F5";
+                                
+                                console.log("Se limpio la lista del carrito")
+                            })
                         }
                 } else {
                     alert("No ingreso datos correctos");
                     console.log("No ingreso datos correctos");
+
+                    const textMod = document.querySelector(".aqui").textContent = "Se ha producido un error. Para intentar de nuevo, presione F5";
+                    console.log(textMod)
                 }
         break;
         default:
             alert("No ingreso datos correctos");
             console.log("No ingreso datos correctos");
+            
+            const textMod = document.querySelector(".aqui").textContent = "Se ha producido un error. Para intentar de nuevo, presione F5";
+            console.log(textMod)
         break;
     }
 
 } else {
     alert("No se pudo completar la compra");
     console.log("No se pudo completar la compra");
+
+    const textMod = document.querySelector(".aqui").textContent = "Se ha producido un error. Para intentar de nuevo, presione F5";
+    console.log(textMod)
 }
-
-//const enterDelete = document.querySelector("li")
-
-//enterDelete.addEventListener("keydown", () =>{
-//    const textDelete = document.querySelector("li")
-//    textDelete.remove()
-//})
 
 }
 
