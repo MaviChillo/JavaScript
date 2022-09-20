@@ -17,13 +17,13 @@
   display: flex;
   opacity: 75%; }
   nav .encabezado__img {
-    width: 70%; }
+    width: 90%; }
   nav .navbar-brand {
-    width: 25%; }
+    width: 40%; }
   nav ul {
     position: sticky;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-items: center; }
     nav ul li {
       list-style: none;
@@ -184,19 +184,31 @@ h1, h2, h3 {
 
 /* merch */
 
+
+.figure button {
+  color: #FFFFFF;
+  border-color: darkred;
+  background-color: darkred;  
+}
+  .figure button:hover {
+    color: #FFFFFF;
+    background-color: darkred;
+    border-color: darkred; }
+
 #listaCarrito .aqui{
   font-size: 1rem;
 }
 
-.cart {
+#cart {
   display: flex;
   justify-content: flex-end;
-  margin: 10px;
-  width: 100%; }
-  .cart a {
-    width: 5%; }
-    .cart a .img {
-      width: 50%; }
+  /* margin: 10px; */
+  width: 2%; }
+    #cart .img {
+      width: 5%; 
+    }
+
+
 
 /* figures */
 .section {
