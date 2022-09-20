@@ -53,17 +53,23 @@ if (carrito.length === 0 &&
 const carritoProductos = []
 console.log(carritoProductos)
 
-const cart = document.querySelector("#ddm")
 
-for (let carritoProducto of carritoProductos){
 
-    let lista = document.createElement("li");
+function compra(){
 
-    lista.innerHTML = carritoProducto
+    const cart = document.querySelector("#ddm");
 
-    cart.appendChild(lista);
-    
+    for (let carritoProducto of carritoProductos){
+
+        let lista = document.createElement("li");
+
+        lista.innerHTML = carritoProducto
+
+        cart.appendChild(lista);
+
+    }
 }
+
 
 
 // remeras
@@ -239,10 +245,24 @@ acces4.onclick = function(){
 
 
 
+// carrito
+
+// const cart = document.querySelector("#ddm")
+
+// for (let carritoProducto of carritoProductos){
+
+//     let lista = document.createElement("li");
+
+//     lista.innerHTML = carritoProducto
+
+//     cart.appendChild(lista);
+    
+// }
 
 
 
-function compra(){
-}
+
+
+
 
 compra();
