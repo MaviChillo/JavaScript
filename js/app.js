@@ -504,7 +504,8 @@ const buy =document.querySelector("#buy")
 
 buy.onclick = function(){
 
-Swal.fire({
+    if (carritoProductos > 0) {
+        Swal.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
     icon: 'question',
@@ -529,6 +530,16 @@ Swal.fire({
     }
   })
 
+    } else {
+        Swal.fire(
+            'The cart is empty!',
+            'You cannot buy if the cart is empty, please select a product.',
+            'error'
+          )
+    }
+
+
+
 }
 
 
@@ -537,7 +548,8 @@ const delet =document.querySelector("#delet")
 
 delet.onclick = function(){
 
-Swal.fire({
+    if (carritoProductos > 0) {
+        Swal.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
     icon: 'warning',
@@ -560,6 +572,15 @@ Swal.fire({
     
     }
   })
+
+    } else {
+        Swal.fire(
+            'The cart is empty!',
+            ``,
+            'error'
+          )
+    }
+
 
 }
 
