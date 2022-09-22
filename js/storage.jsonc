@@ -1,22 +1,9 @@
 // storage
 
 
-
-
-
-
-
-
-
-
-
-const carritoPrStr = carritoProductos
-
-if (carritoProductos.length != 0) {
     const carritoPrStr = JSON.stringify(carritoProductos);
 
     localStorage.setItem("Carrito", carritoPrStr);
 
-}
 
 

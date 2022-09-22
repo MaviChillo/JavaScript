@@ -39,16 +39,6 @@ const carrito = []
 console.log(carrito)
 console.log(carrito.length)
 
-if (carrito.length === 0 && 
-    carrito.length <1) {
-    
-} else {
-    let resultado = carrito.reduce((accum, carrito) => {
-    return accum + carrito})
-
-    console.log(resultado)
-}
-
 
 const carritoProductos = []
 console.log(carritoProductos)
@@ -58,10 +48,9 @@ console.log(carritoProductos)
 function compra(){
 
     const cart = document.querySelector("#ddm");
+    let lista = document.createElement("li");
 
-    for (let carritoProducto of carritoProductos){
-
-        let lista = document.createElement("li");
+    for (let carritoProducto of carritoProductos){ 
 
         lista.innerHTML = carritoProducto
 
@@ -73,14 +62,35 @@ function compra(){
 
 
 // remeras
+const carritoProductosArray = JSON.parse(localStorage.getItem("Carrito"))
+    let resultado;
 
-const reme1 =document.querySelector("#reme1")
+function prod() {
+
+    
+    const reme1 =document.querySelector("#reme1")
 
 reme1.onclick = function(){
     console.log(`${remeras[0].producto} $${remeras[0].precio}`);
+
     carrito.push(parseInt(`${remeras[0].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${remeras[0].producto}` + " " + `$${remeras[0].precio}`);
+
+    carritoProductosArray.push(`${remeras[0].producto}` + " " + `$${remeras[0].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -88,9 +98,25 @@ const reme2 =document.querySelector("#reme2")
 
 reme2.onclick = function(){
     console.log(`${remeras[1].producto} $${remeras[1].precio}`);
+
     carrito.push(parseInt(`${remeras[1].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${remeras[1].producto}` + " " + `$${remeras[1].precio}`);
+
+    carritoProductosArray.push(`${remeras[1].producto}` + " " + `$${remeras[1].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -98,9 +124,25 @@ const reme3 =document.querySelector("#reme3")
 
 reme3.onclick = function(){
     console.log(`${remeras[2].producto} $${remeras[2].precio}`);
+
     carrito.push(parseInt(`${remeras[2].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${remeras[2].producto}` + " " + `$${remeras[2].precio}`);
+
+    carritoProductosArray.push(`${remeras[2].producto}` + " " + `$${remeras[2].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -108,9 +150,25 @@ const reme4 =document.querySelector("#reme4")
 
 reme4.onclick = function(){
     console.log(`${remeras[3].producto} $${remeras[3].precio}`);
+
     carrito.push(parseInt(`${remeras[3].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${remeras[3].producto}` + " " + `$${remeras[3].precio}`);
+
+    carritoProductosArray.push(`${remeras[3].producto}` + " " + `$${remeras[3].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -121,9 +179,25 @@ const buzo1 =document.querySelector("#buzo1")
 
 buzo1.onclick = function(){
     console.log(`${buzos[0].producto} $${buzos[0].precio}`);
+
     carrito.push(parseInt(`${buzos[0].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${buzos[0].producto}` + " " + `$${buzos[0].precio}`);
+
+    carritoProductosArray.push(`${buzos[0].producto}` + " " + `$${buzos[0].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -131,9 +205,25 @@ const buzo2 =document.querySelector("#buzo2")
 
 buzo2.onclick = function(){
     console.log(`${buzos[1].producto} $${buzos[1].precio}`);
+
     carrito.push(parseInt(`${buzos[1].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${buzos[1].producto}` + " " + `$${buzos[1].precio}`);
+
+    carritoProductosArray.push(`${buzos[1].producto}` + " " + `$${buzos[1].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -141,9 +231,25 @@ const buzo3 =document.querySelector("#buzo3")
 
 buzo3.onclick = function(){
     console.log(`${buzos[2].producto} $${buzos[2].precio}`);
+
     carrito.push(parseInt(`${buzos[2].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${buzos[2].producto}` + " " + `$${buzos[2].precio}`);
+
+    carritoProductosArray.push(`${buzos[2].producto}` + " " + `$${buzos[2].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -151,9 +257,25 @@ const buzo4 =document.querySelector("#buzo4")
 
 buzo4.onclick = function(){
     console.log(`${buzos[3].producto} $${buzos[3].precio}`);
+
     carrito.push(parseInt(`${buzos[3].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${buzos[3].producto}` + " " + `$${buzos[3].precio}`);
+
+    carritoProductosArray.push(`${buzos[3].producto}` + " " + `$${buzos[3].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -164,9 +286,25 @@ const discos1 =document.querySelector("#discos1")
 
 discos1.onclick = function(){
     console.log(`${discos[0].producto} $${discos[0].precio}`);
+
     carrito.push(parseInt(`${discos[0].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${discos[0].producto}` + " " + `$${discos[0].precio}`);
+
+    carritoProductosArray.push(`${discos[0].producto}` + " " + `$${discos[0].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -174,9 +312,25 @@ const discos2 =document.querySelector("#discos2")
 
 discos2.onclick = function(){
     console.log(`${discos[1].producto} $${discos[1].precio}`);
+
     carrito.push(parseInt(`${discos[1].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${discos[1].producto}` + " " + `$${discos[1].precio}`);
+
+    carritoProductosArray.push(`${discos[1].producto}` + " " + `$${discos[1].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -184,9 +338,25 @@ const discos3 =document.querySelector("#discos3")
 
 discos3.onclick = function(){
     console.log(`${discos[2].producto} $${discos[2].precio}`);
+
     carrito.push(parseInt(`${discos[2].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${discos[2].producto}` + " " + `$${discos[2].precio}`);
+
+    carritoProductosArray.push(`${discos[2].producto}` + " " + `$${discos[2].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -194,9 +364,25 @@ const discos4 =document.querySelector("#discos4")
 
 discos4.onclick = function(){
     console.log(`${discos[3].producto} $${discos[3].precio}`);
+
     carrito.push(parseInt(`${discos[3].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${discos[3].producto}` + " " + `$${discos[3].precio}`);
+
+    carritoProductosArray.push(`${discos[3].producto}` + " " + `$${discos[3].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -207,9 +393,25 @@ const acces1 =document.querySelector("#acces1")
 
 acces1.onclick = function(){
     console.log(`${accesorios[0].producto} $${accesorios[0].precio}`);
+
     carrito.push(parseInt(`${accesorios[0].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${accesorios[0].producto}` + " " + `$${accesorios[0].precio}`);
+
+    carritoProductosArray.push(`${accesorios[0].producto}` + " " + `$${accesorios[0].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -217,9 +419,25 @@ const acces2 =document.querySelector("#acces2")
 
 acces2.onclick = function(){
     console.log(`${accesorios[1].producto} $${accesorios[1].precio}`);
+
     carrito.push(parseInt(`${accesorios[1].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${accesorios[1].producto}` + " " + `$${accesorios[1].precio}`);
+
+    carritoProductosArray.push(`${accesorios[1].producto}` + " " + `$${accesorios[1].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -227,9 +445,25 @@ const acces3 =document.querySelector("#acces3")
 
 acces3.onclick = function(){
     console.log(`${accesorios[2].producto} $${accesorios[2].precio}`);
+
     carrito.push(parseInt(`${accesorios[2].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${accesorios[2].producto}` + " " + `$${accesorios[2].precio}`);
+
+    carritoProductosArray.push(`${accesorios[2].producto}` + " " + `$${accesorios[2].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
 }
 
 
@@ -237,9 +471,27 @@ const acces4 =document.querySelector("#acces4")
 
 acces4.onclick = function(){
     console.log(`${accesorios[3].producto} $${accesorios[3].precio}`);
+
     carrito.push(parseInt(`${accesorios[3].precio}`));
     console.log(carrito);
+
     carritoProductos.push(`${accesorios[3].producto}` + " " + `$${accesorios[3].precio}`);
+
+    carritoProductosArray.push(`${accesorios[3].producto}` + " " + `$${accesorios[3].precio}`);
+    localStorage.setItem("Carrito", carritoProductosArray);
+
+    if (carrito.length === 0) {
+        console.log("carrito vacio");
+    } else {
+        resultado = carrito.reduce((accum, carrito) => {
+            return accum + carrito});
+
+            console.log(resultado);
+    } 
+
+    compra()
+}
+
 }
 
 
@@ -247,22 +499,72 @@ acces4.onclick = function(){
 
 // carrito
 
-// const cart = document.querySelector("#ddm")
 
-// for (let carritoProducto of carritoProductos){
+const buy =document.querySelector("#buy")
 
-//     let lista = document.createElement("li");
+buy.onclick = function(){
 
-//     lista.innerHTML = carritoProducto
+Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'question',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, buy cart'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'All Done!',
+        'Thank you for shopping with us!',
+        'success'
+        )
 
-//     cart.appendChild(lista);
+        const liMod= document.querySelector("#ddm").textContent=""
+        carrito.splice(0,carrito.length)
+        carritoProductos.splice(0,carritoProductos.length)
+
+        localStorage.clear()
+
+    }
+  })
+
+}
+
+
+
+const delet =document.querySelector("#delet")
+
+delet.onclick = function(){
+
+Swal.fire({
+    title: 'Are you sure?',
+    text: "You won't be able to revert this!",
+    icon: 'warning',
+    showCancelButton: true,
+    confirmButtonColor: '#3085d6',
+    cancelButtonColor: '#d33',
+    confirmButtonText: 'Yes, delete it!'
+  }).then((result) => {
+    if (result.isConfirmed) {
+      Swal.fire(
+        'Deleted!',
+        'Your file has been deleted.',
+        'success'
+      )
+        const liMod= document.querySelector("#ddm").textContent=""
+        carrito.splice(0,carrito.length)
+        carritoProductos.splice(0,carritoProductos.length)
+        
+        localStorage.clear()
     
-// }
+    }
+  })
+
+}
 
 
 
 
-
-
-
+prod();
 compra();
