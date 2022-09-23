@@ -504,29 +504,37 @@ const buy =document.querySelector("#buy")
 
 buy.onclick = function(){
 
-    if (carritoProductos > 0) {
+    if (carritoProductos != 0) {
         Swal.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
     icon: 'question',
     showCancelButton: true,
     color: 'darkred', // text
-    background: 'grey', // alert backgorund
+    background: '#191919', // alert backgorund
     backdrop: `
-      rgba(black,0.4)
+      rgba(black, 0.6)
       left top
       no-repeat
     `,// atras del alert
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
+    confirmButtonColor: 'darkgreen',
+    cancelButtonColor: 'darkred',
     confirmButtonText: 'Yes, buy cart'
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire(
-        'All Done!',
-        'Thank you for shopping with us!',
-        'success'
-        )
+      Swal.fire({
+        title: 'All Done!',
+        text: 'Thank you for shopping with us!',
+        icon: 'success',
+        confirmButtonColor: 'darkred',
+        color: 'darkred', // text
+    background: '#191919', // alert backgorund
+    backdrop: `
+      rgba(black, 0.6)
+      left top
+      no-repeat
+    `,// atras del alert
+        })
 
         const liMod= document.querySelector("#ddm").textContent=""
         carrito.splice(0,carrito.length)
@@ -536,13 +544,20 @@ buy.onclick = function(){
 
     }
   })
-
     } else {
-        Swal.fire(
-            'The cart is empty!',
-            'You cannot buy if the cart is empty, please select a product.',
-            'error'
-          )
+        Swal.fire({
+            title: 'The cart is empty!',
+            text: 'You cannot buy if the cart is empty, please select a product.',
+            icon: 'error',
+            confirmButtonColor: 'darkred',
+            color: 'darkred', // text
+    background: '#191919', // alert backgorund
+    backdrop: `
+      rgba(black, 0.6)
+      left top
+      no-repeat
+    `,// atras del alert
+        })
     }
 
 
@@ -561,25 +576,33 @@ delet.onclick = function(){
     text: "You won't be able to revert this!",
     icon: 'warning',
     color: 'darkred', // text
-    background: 'grey', // alert backgorund
+    background: '#191919', // alert backgorund
     backdrop: `
-      rgba(black,0.4)
+      rgba(black,0.6)
       left top
       no-repeat
     `,// atras del alert
     showCancelButton: true,
-    confirmButtonColor: '#3085d6',
-    cancelButtonColor: '#d33',
+    confirmButtonColor: 'dargreen',
+    cancelButtonColor: 'darkred',
     confirmButtonText: 'Yes, delete it!'
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire(
+      Swal.fire({
         
-        'Deleted!',
-        'Your file has been deleted.',
-        'success'
+        title: 'Deleted!',
+        text: 'Your file has been deleted.',
+        icon: 'success',
+        confirmButtonColor: 'darkred',
+        color: 'darkred', // text
+    background: '#191919', // alert backgorund
+    backdrop: `
+      rgba(black, 0.6)
+      left top
+      no-repeat
+    `,// atras del alert
         
-      )
+    })
         const liMod= document.querySelector("#ddm").textContent=""
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
@@ -590,11 +613,19 @@ delet.onclick = function(){
   })
 
     } else {
-        Swal.fire(
-            'The cart is empty!',
-            ``,
-            'error'
-          )
+        Swal.fire({
+            title:'The cart is empty!',
+            text:``,
+            icon: 'error',
+            confirmButtonColor: 'darkred',
+            color: 'darkred', // text
+    background: '#191919', // alert backgorund
+    backdrop: `
+      rgba(black, 0.6)
+      left top
+      no-repeat
+    `,// atras del alert
+        })
     }
 
 
