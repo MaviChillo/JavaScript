@@ -510,6 +510,13 @@ buy.onclick = function(){
     text: "You won't be able to revert this!",
     icon: 'question',
     showCancelButton: true,
+    color: 'darkred', // text
+    background: 'grey', // alert backgorund
+    backdrop: `
+      rgba(black,0.4)
+      left top
+      no-repeat
+    `,// atras del alert
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
     confirmButtonText: 'Yes, buy cart'
@@ -553,6 +560,13 @@ delet.onclick = function(){
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
     icon: 'warning',
+    color: 'darkred', // text
+    background: 'grey', // alert backgorund
+    backdrop: `
+      rgba(black,0.4)
+      left top
+      no-repeat
+    `,// atras del alert
     showCancelButton: true,
     confirmButtonColor: '#3085d6',
     cancelButtonColor: '#d33',
@@ -560,9 +574,11 @@ delet.onclick = function(){
   }).then((result) => {
     if (result.isConfirmed) {
       Swal.fire(
+        
         'Deleted!',
         'Your file has been deleted.',
         'success'
+        
       )
         const liMod= document.querySelector("#ddm").textContent=""
         carrito.splice(0,carrito.length)
