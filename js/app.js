@@ -61,12 +61,12 @@ function compra(){
 
 
 
-// remeras
 const carritoProductosArray = JSON.parse(localStorage.getItem("Carrito"))
     let resultado;
 
 function prod() {
 
+// remeras
     
     const reme1 =document.querySelector("#reme1")
 
@@ -540,7 +540,7 @@ buy.onclick = function(){
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
 
-        localStorage.clear()
+        //localStorage.clear()
 
     }
   })
@@ -570,7 +570,7 @@ const delet =document.querySelector("#delet")
 
 delet.onclick = function(){
 
-    if (carritoProductos > 0) {
+    if (carritoProductos != 0) {
         Swal.fire({
     title: 'Are you sure?',
     text: "You won't be able to revert this!",
@@ -607,11 +607,10 @@ delet.onclick = function(){
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
         
-        localStorage.clear()
+        //localStorage.clear()
     
     }
   })
-
     } else {
         Swal.fire({
             title:'The cart is empty!',
