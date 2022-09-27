@@ -540,7 +540,7 @@ buy.onclick = function(){
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
 
-        //localStorage.clear()
+        localStorage.removeItem("Carrito")
 
     }
   })
@@ -607,7 +607,7 @@ delet.onclick = function(){
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
         
-        //localStorage.clear()
+        localStorage.removeItem("Carrito")
     
     }
   })

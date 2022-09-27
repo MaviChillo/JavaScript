@@ -39,6 +39,12 @@
         nav ul li a:hover {
           font-weight: 1000;
           cursor: pointer; }
+            nav .dropdown-menu #ddm{
+              justify-content: left;
+            }
+            nav .dropdown-menu #ddm button{
+              justify-content: center;
+            }
 
 @keyframes textAlpha {
   from {
