@@ -10,6 +10,7 @@ const carritoProductos = []
 console.log(carritoProductos)
 
 
+
 function compra(){
 
     const cart = document.querySelector("#ddm");
@@ -25,9 +26,8 @@ function compra(){
 }
 
 
-const carritoProductosArray = JSON.parse(localStorage.getItem("Carrito"))
+const carritoProductosArray = []
     let resultado;
-
 
 function prod() {
 
@@ -55,7 +55,7 @@ reme1.onclick = function(){
     carritoProductos.push(`${remeras[0].producto}` + " " + `$${remeras[0].precio}`);
 
     carritoProductosArray.push(`${remeras[0].producto}` + " " + `$${remeras[0].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -75,7 +75,7 @@ reme2.onclick = function(){
     carritoProductos.push(`${remeras[1].producto}` + " " + `$${remeras[1].precio}`);
 
     carritoProductosArray.push(`${remeras[1].producto}` + " " + `$${remeras[1].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -94,7 +94,7 @@ reme3.onclick = function(){
     carritoProductos.push(`${remeras[2].producto}` + " " + `$${remeras[2].precio}`);
 
     carritoProductosArray.push(`${remeras[2].producto}` + " " + `$${remeras[2].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -114,7 +114,7 @@ reme4.onclick = function(){
     carritoProductos.push(`${remeras[3].producto}` + " " + `$${remeras[3].precio}`);
 
     carritoProductosArray.push(`${remeras[3].producto}` + " " + `$${remeras[3].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -147,7 +147,7 @@ buzo1.onclick = function(){
     carritoProductos.push(`${buzos[0].producto}` + " " + `$${buzos[0].precio}`);
 
     carritoProductosArray.push(`${buzos[0].producto}` + " " + `$${buzos[0].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -167,7 +167,7 @@ buzo2.onclick = function(){
     carritoProductos.push(`${buzos[1].producto}` + " " + `$${buzos[1].precio}`);
 
     carritoProductosArray.push(`${buzos[1].producto}` + " " + `$${buzos[1].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -186,7 +186,7 @@ buzo3.onclick = function(){
     carritoProductos.push(`${buzos[2].producto}` + " " + `$${buzos[2].precio}`);
 
     carritoProductosArray.push(`${buzos[2].producto}` + " " + `$${buzos[2].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
@@ -206,7 +206,7 @@ buzo4.onclick = function(){
     carritoProductos.push(`${buzos[3].producto}` + " " + `$${buzos[3].precio}`);
 
     carritoProductosArray.push(`${buzos[3].producto}` + " " + `$${buzos[3].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
     
@@ -240,7 +240,7 @@ discos1.onclick = function(){
     carritoProductos.push(`${discos[0].producto}` + " " + `$${discos[0].precio}`);
 
     carritoProductosArray.push(`${discos[0].producto}` + " " + `$${discos[0].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -259,7 +259,7 @@ discos2.onclick = function(){
     carritoProductos.push(`${discos[1].producto}` + " " + `$${discos[1].precio}`);
 
     carritoProductosArray.push(`${discos[1].producto}` + " " + `$${discos[1].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -278,7 +278,7 @@ discos3.onclick = function(){
     carritoProductos.push(`${discos[2].producto}` + " " + `$${discos[2].precio}`);
 
     carritoProductosArray.push(`${discos[2].producto}` + " " + `$${discos[2].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -298,7 +298,7 @@ discos4.onclick = function(){
     carritoProductos.push(`${discos[3].producto}` + " " + `$${discos[3].precio}`);
 
     carritoProductosArray.push(`${discos[3].producto}` + " " + `$${discos[3].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -332,7 +332,7 @@ acces1.onclick = function(){
     carritoProductos.push(`${accesorios[0].producto}` + " " + `$${accesorios[0].precio}`);
 
     carritoProductosArray.push(`${accesorios[0].producto}` + " " + `$${accesorios[0].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -352,7 +352,7 @@ acces2.onclick = function(){
     carritoProductos.push(`${accesorios[1].producto}` + " " + `$${accesorios[1].precio}`);
 
     carritoProductosArray.push(`${accesorios[1].producto}` + " " + `$${accesorios[1].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -373,7 +373,7 @@ acces3.onclick = function(){
     carritoProductos.push(`${accesorios[2].producto}` + " " + `$${accesorios[2].precio}`);
 
     carritoProductosArray.push(`${accesorios[2].producto}` + " " + `$${accesorios[2].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
@@ -394,7 +394,7 @@ acces4.onclick = function(){
     carritoProductos.push(`${accesorios[3].producto}` + " " + `$${accesorios[3].precio}`);
 
     carritoProductosArray.push(`${accesorios[3].producto}` + " " + `$${accesorios[3].precio}`);
-    localStorage.setItem("Carrito", carritoProductosArray);
+    localStorage.setItem("Carrito", JSON.stringify(carritoProductosArray));
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
