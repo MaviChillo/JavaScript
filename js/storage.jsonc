@@ -1,9 +1,9 @@
 // storage
 
 
-    const carritoPrStr = JSON.stringify(carritoProductos);
+const carritoPrStr = JSON.stringify(carritoProductos);
 
-    localStorage.setItem("Carrito", carritoPrStr);
+localStorage.setItem("Carrito", carritoPrStr);
 
 
 

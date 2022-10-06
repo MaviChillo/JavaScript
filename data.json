@@ -1,0 +1,27 @@
+
+
+[
+    {"id": 1, "producto": "Remera Red Cross", "precio": 2500},
+    {"id": 2, "producto": "Remera The Fighter", "precio": 2500},
+    {"id": 3, "producto": "Remera Album Art", "precio": 2500},
+    {"id": 4, "producto": "Remera Phantom Tomorrow", "precio": 2500},
+
+
+    {"id": 5, "producto": "Buzo Blessed and Cursed", "precio": 5500},
+    {"id": 6, "producto": "Buzo Phantom Tomorrow", "precio": 5500},
+    {"id": 7, "producto": "Buzo Scarlet Cross", "precio": 5500},
+    {"id": 8, "producto": "Buzo Wounds", "precio": 5500},
+
+
+    {"id": 9, "producto": "Vinilo Phantom Tomorrow", "precio": 2600},
+    {"id": 10, "producto": "Cd Phantom Tomorrow", "precio": 1200},
+    {"id": 11, "producto": "Cd Wretched and Divine", "precio": 1000},
+    {"id": 12, "producto": "Vinilo Re-stitch These Wounds", "precio": 2500},
+
+
+    {"id": 13, "producto": "Buttons Born Again", "precio": 1000},
+    {"id": 14, "producto": "Patches Phantom Tomorrow", "precio": 2000},
+    {"id": 15, "producto": "Beanie Black Veil Brides", "precio": 3000},
+    {"id": 16, "producto": "Necklace Black Veil Brides", "precio": 2000}
+
+]
