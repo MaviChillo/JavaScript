@@ -37,6 +37,9 @@
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="index.html">Home</a>
         </li>
+        <!-- <li class="nav-item">
+          <a id="cartNav" class="nav-link active" aria-current="page" href="#">Cart</a>
+        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             <img id="cart" class="img" src="img/merch/cart2.png" alt="logo de carrito de compras">
@@ -47,7 +50,7 @@
             <div id="total"></div>
             <button id="buy" type="button" class="btn btn-success">Buy Cart</button>
             <button id="delet" type="button" class="btn btn-danger">Delete Cart</button>
-          </ul>
+          </ul> -->
         </li>
       </ul>
     </div>
@@ -62,7 +65,12 @@
 
   <main id="merch" class="main">
 
-
+    <div class="logoCarrito">
+      <button id="boton-carrito">
+        <i class="fas fa-shopping-cart"></i>
+        <img src="img/merch/cart2.png" alt="imagen de carrito">
+      <span id="contadorCarrito">0</span></button>
+    </div>
     
     <!-- remeras -->
 
@@ -279,6 +287,23 @@
     </a>
   </div>
   </footer>
+
+
+<!-- div carrito -->
+
+  <div class="modal-contenedor">
+    <div class="modal-carrito">
+        <h3>Cart</h3>
+        <button id="carritoCerrar"><i class="fas fa-times-circle"></i></button>
+        <div id="carrito-contenedor">
+            
+        </div>
+        <p class="precioProducto">Precio total: $<span id="precioTotal">0</span></p>
+        <button id="buy" class="boton-agregar">Buy Cart</button>
+        <button id="vaciar-carrito" class="boton-agregar">Delete Cart</button>
+    </div>
+</div>
+
 
 
   <!-- js -->

@@ -12,19 +12,32 @@ console.log(carritoProductos)
 const carritoProductosArray = []
     let resultado;
 
+
+
 function compra(){
 
-    const cart = document.querySelector("#ddm");
+    const cart = document.querySelector("#carrito-contenedor");
     let lista = document.createElement("li");
 
     for (let carritoProducto of carritoProductos){ 
 
     lista.innerHTML = carritoProducto
 
-        cart.appendChild(lista);
+    cart.appendChild(lista);
+    
+    let botonTrash = document.createElement("button");
+
+    botonTrash.innerHTML = "x"
+    
+    lista.appendChild(botonTrash)
+
+    botonTrash.addEventListener('click', () => {
+        delete("li")
+    })
 
     }
-}
+    }
+
 
 // function total(){
 
@@ -69,7 +82,7 @@ reme1.onclick = function(){
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito});console.log(resultado);
 
     compra()
-    } 
+} 
 
 
 const reme2 =document.querySelector("#reme2")
@@ -455,7 +468,7 @@ buy.onclick = function(){
     `,// atras del alert
         })
 
-        const liMod= document.querySelector("#ddm").textContent=""
+        const liMod= document.querySelector("#carrito-contenedor").textContent=""
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
 
@@ -485,7 +498,7 @@ buy.onclick = function(){
 
 
 
-const delet =document.querySelector("#delet")
+const delet =document.querySelector("#vaciar-carrito")
 
 delet.onclick = function(){
 
@@ -522,7 +535,7 @@ delet.onclick = function(){
     `,// atras del alert
         
     })
-        const liMod= document.querySelector("#ddm").textContent=""
+        const liMod= document.querySelector("#carrito-contenedor").textContent=""
         carrito.splice(0,carrito.length)
         carritoProductos.splice(0,carritoProductos.length)
         
@@ -549,6 +562,30 @@ delet.onclick = function(){
 
 }
 
+
+// DIV CARRITO
+
+const contenedorModal = document.getElementsByClassName('modal-contenedor')[0]
+const botonAbrir = document.getElementById('boton-carrito')
+const botonCerrar = document.getElementById('carritoCerrar')
+const modalCarrito = document.getElementsByClassName('modal-carrito')[0]
+
+
+botonAbrir.addEventListener('click', ()=>{
+    contenedorModal.classList.toggle('modal-active')
+})
+botonCerrar.addEventListener('click', ()=>{
+    contenedorModal.classList.toggle('modal-active')
+})
+
+contenedorModal.addEventListener('click', (event) =>{
+    contenedorModal.classList.toggle('modal-active')
+
+})
+modalCarrito.addEventListener('click', (event) => {
+    event.stopPropagation() //cuando clickeo sobre el modal se finaliza la propagacion del click a los elementos
+    //padre
+})
 
 
 
