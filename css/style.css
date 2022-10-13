@@ -222,13 +222,6 @@ h1, h2, h3 {
   .section figure a {
     text-decoration: none;
     color: #FFFFFF; }
-    .section figure a:hover {
-      color: darkred; }
-  .section figure:hover {
-    transform: scale(1.17);
-    color: darkred;
-    font-weight: 600;
-    cursor: pointer; }
   .section figure img {
     width: 250px; }
   .section .price {

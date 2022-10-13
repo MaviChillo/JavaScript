@@ -9,7 +9,8 @@ console.log(carrito.length)
 const carritoProductos = []
 console.log(carritoProductos)
 
-
+const carritoProductosArray = []
+    let resultado;
 
 function compra(){
 
@@ -25,9 +26,17 @@ function compra(){
     }
 }
 
+// function total(){
 
-const carritoProductosArray = []
-    let resultado;
+//     const cartTotal = document.querySelector("#total");
+//     let liTotal = document.createElement("li");
+
+//     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); liTotal.innerHTML = resultado; 
+
+//     cartTotal.appendChild(liTotal);
+
+// }
+
 
 function prod() {
 
@@ -356,6 +365,7 @@ acces2.onclick = function(){
 
     carrito.length === 0 ? console.log("carrito vacio") : resultado = carrito.reduce((accum, carrito) => {return accum + carrito}); console.log(resultado);
 
+
     compra()
     } 
 
@@ -544,3 +554,4 @@ delet.onclick = function(){
 
 prod();
 compra();
+//total();
