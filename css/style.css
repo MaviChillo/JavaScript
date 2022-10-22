@@ -1066,3 +1066,31 @@ p {
 .boton-eliminar:focus {
   outline: none;
 }
+
+.boton-sumar {
+  background-color: #191919;
+  color: red;
+  border: none;
+  font-size: 25px;
+}
+
+.boton-sumar:hover {
+  cursor: pointer;
+}
+.boton-sumar:focus {
+  outline: none;
+}
+
+.boton-restar {
+  background-color: #191919;
+  color: red;
+  border: none;
+  font-size: 25px;
+}
+
+.boton-restar:hover {
+  cursor: pointer;
+}
+.boton-restar:focus {
+  outline: none;
+}

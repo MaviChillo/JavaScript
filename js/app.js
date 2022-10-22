@@ -22,61 +22,49 @@ const contadorCarrito = document.querySelector(`#contadorCarrito`)
 const precioTotal = document.querySelector(`#precioTotal`)
 
     const arrayProductos = []
-    const carrito = []
+    let carrito = []
 
-    // document.addEventListener('DOMContentLoaded', () => {
-    //     if (localStorage.getItem('carrito')){
-    //         carrito = JSON.parse(localStorage.getItem('carrito'))
-    //         actualizarCarrito()
-    //     }
-    // })
 
-    fetch("data.json") 
-    .then((res) => res.json())
-    .then ((data) => {
-        arrayProductos.push({id: 1, nombre: "Remera Red Cross", precio: 2500, cantidad: 1, img: `./img/merch/remes/reme1.png`},
-        {id: 2, nombre: "Remera The Fighter", precio: 2500, cantidad: 1, img: `./img/merch/remes/reme2.png`},
-        {id: 3, nombre: "Remera Album Art", precio: 2500, cantidad: 1, img: `./img/merch/remes/reme3.png`},
-        {id: 4, nombre: "Remera Phantom Tomorrow", precio: 2500, cantidad: 1, img: `./img/merch/remes/reme4.png`},
-        {id: 5, nombre: "Buzo Blessed and Cursed", precio: 5500, cantidad: 1, img: `./img/merch/buzos/buzo1.png`},
-        {id: 6, nombre: "Buzo Phantom Tomorrow", precio: 5500, cantidad: 1, img: `./img/merch/buzos/buzo2.png`},
-        {id: 7, nombre: "Buzo Scarlet Cross", precio: 5500, cantidad: 1, img: `./img/merch/buzos/buzo3.png`},
-        {id: 8, nombre: "Buzo Wounds", precio: 5500, cantidad: 1, img: `./img/merch/buzos/buzo4.png`},
-        {id: 9, nombre: "Vinilo Phantom Tomorrow", precio: 2600, cantidad: 1, img: `./img/merch/vin-cd/vinilo1.png`},
-        {id: 10, nombre: "Cd Phantom Tomorrow", precio: 1200, cantidad: 1, img: `./img/merch/vin-cd/cd1.png`},
-        {id: 11, nombre: "Cd Wretched and Divine", precio: 1000, cantidad: 1, img: `./img/merch/vin-cd/cd2.png`},
-        {id: 12, nombre: "Vinilo Re-stitch These Wounds", precio: 2500, cantidad: 1, img: `./img/merch/vin-cd/vinilo2.png`},
-        {id: 13, nombre: "Buttons Born Again", precio: 1000, cantidad: 1, img: `./img/merch/accesorios/buttons.png`},
-        {id: 14, nombre: "Patches Phantom Tomorrow", precio: 2000, cantidad: 1, img: `./img/merch/accesorios/patches.png`},
-        {id: 15, nombre: "Beanie Black Veil Brides", precio: 3000, cantidad: 1, img: `./img/merch/accesorios/beanie.png`},
-        {id: 16, nombre: "Necklace Black Veil Brides", precio: 2000, cantidad: 1, img: `./img/merch/accesorios/collar.jpg`}
-        )
-    arrayProductos.forEach((producto) => {
+    document.addEventListener('DOMContentLoaded', () => {
+        if (localStorage.getItem('carrito')){
+            carrito = JSON.parse(localStorage.getItem('carrito'))
+            actualizarCarrito()
+        }
+    })
+
+
+
+    fetch("data.json")
+  .then((res) => res.json())
+  .then((data) => {
+    data.forEach((prod) => {
         const div = document.createElement('div')
         div.classList.add('producto')
         div.innerHTML = `
-        <img src=${producto.img} alt= "">
-        <h3>${producto.nombre}</h3>
-        <p class="precioProducto">Precio:$ ${producto.precio}</p>
-        <button id="agregar${producto.id}" class="boton-agregar">Agregar al Carrito</button>
+        <img src=${prod.img} alt= "">
+        <h3>${prod.nombre}</h3>
+        <p class="precioProducto">Precio:$ ${prod.precio}</p>
+        <button id="agregar${prod.id}" class="boton-agregar">Agregar al Carrito</button>
         `
         contenedorProductos.appendChild(div)
+        arrayProductos.push(prod)
+
     
-        const boton = document.querySelector(`#agregar${producto.id}`)
+        const boton = document.querySelector(`#agregar${prod.id}`)
         
         boton.addEventListener('click', () => {
-            agregarAlCarrito(producto.id)
-        })
-    })
+            agregarAlCarrito(prod.id)
+    });
+  });
+  })
 
-    })
 
 const agregarAlCarrito = (prodId) => {
     const existe = carrito.some (prod => prod.id === prodId)
 
     if (existe){
         const prod = carrito.map (prod => {
-            prod.id === prodId && prod.cantidad++ 
+            prod.id === prodId && prod.cantidad++
         })
     } else {
         const item = arrayProductos.find ((prod) => prod.id === prodId)
@@ -86,6 +74,7 @@ const agregarAlCarrito = (prodId) => {
     actualizarCarrito()
 }
 
+
 const eliminarDelCarrito = (prodId) => {
     const item = carrito.find((prod) => prod.id === prodId)
 
@@ -94,6 +83,21 @@ const eliminarDelCarrito = (prodId) => {
 
     actualizarCarrito()
 }
+
+const sumarProd = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId);
+    item.cantidad++;
+    actualizarCarrito();
+
+  };
+
+const restarProd = (prodId) => {
+    const item = carrito.find((prod) => prod.id === prodId);
+    if (item.cantidad > 1) {
+      item.cantidad--;
+      actualizarCarrito();
+    }
+  };
 
 const actualizarCarrito = () => {
 
@@ -105,7 +109,9 @@ const actualizarCarrito = () => {
         div.innerHTML = `
         <p>${prod.nombre}</p>
         <p>Precio: $${prod.precio}</p>
-        <p>Cantidad: <span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick = "sumarProd(${prod.id})" class="boton-sumar"<i>+</i></button>
+        <p><span id="cantidad">${prod.cantidad}</span></p>
+        <button onclick = "restarProd(${prod.id})" class="boton-restar"<i>-</i></button>
         <button onclick = "eliminarDelCarrito(${prod.id})" class="boton-eliminar"<i>🗑</i></button>
         `
 
@@ -115,11 +121,11 @@ const actualizarCarrito = () => {
     });
     
     contadorCarrito.innerText = carrito.length
-    precioTotal.innerText = carrito.reduce((acc, prod) => acc + prod.precio, 0)
+    precioTotal.innerText = carrito
+    .map((item) => item.precio * item.cantidad)
+    .reduce((prev, current) => prev + current, 0);
 
 }
-
-
 
 
 
@@ -145,46 +151,87 @@ modalCarrito.addEventListener('click', (event) => {
     event.stopPropagation()
 })
 
-// carrito
-
-
-
 
 const buy =document.querySelector("#buy")
-
+const usuario = []
 buy.onclick = function(){
 
-    if (carrito != 0) {
+    // if (carrito != 0) {
         Swal.fire({
     title: 'Comprar?',
     text: "Estas seguro de que quieres continuar?",
     icon: 'question',
     showCancelButton: true,
-    color: 'darkred', // text
-    background: '#191919', // alert backgorund
+    color: 'darkred', 
+    background: '#191919', 
     backdrop: `
       rgba(black, 0.6)
       left top
       no-repeat
-    `,// atras del alert
+    `,
     confirmButtonColor: 'darkgreen',
     cancelButtonColor: 'darkred',
     confirmButtonText: 'Si, comprar carrito',
     cancelButtonText: 'Cancelar'
   }).then((result) => {
     if (result.isConfirmed) {
-      Swal.fire({
-        title: 'Listo!',
-        text: 'Gracias por comprar con nosotros!',
-        icon: 'success',
-        confirmButtonColor: 'darkred',
-        color: 'darkred', // text
-    background: '#191919', // alert backgorund
+
+        Swal.fire({
+            title: 'Completa el formulario para completar la compra!',
+            html:
+              '<b>Nombre:</b>' +
+              '<br/>' +
+              '<input id="name"></input>' +
+              '<br/>' +
+              '<b>Email:</b>' +
+              '<br/>' +
+              '<input id="email"></input>' +
+              '<br/>' +
+              '<b>Contraseña:</b>' +
+              '<br/>' +
+              '<input id="pass"></input>',
+            showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+              'Confirmar compra',
+            cancelButtonText:
+              'Cancelar compra',
+              confirmButtonColor: 'darkgreen',
+            cancelButtonColor: 'darkred',
+            color: 'darkred',
+            background: '#191919',
     backdrop: `
       rgba(black, 0.6)
       left top
       no-repeat
-    `,// atras del alert
+    `,
+    preConfirm: () => {
+        const name = Swal.getPopup().querySelector(`#name`).value
+        const email = Swal.getPopup().querySelector(`#email`).value
+        const pass = Swal.getPopup().querySelector(`#pass`).value
+        usuario.push(name, email, pass)
+        localStorage.setItem(`usuario`, JSON.stringify(usuario))
+        if (!name || !email || !pass) {
+          Swal.showValidationMessage(`Porfavor completar los campos correctamente`)
+        }
+        return { nombre: name, email: email , contraseña: pass}
+    }
+        }).then((result) => {
+            if (result.isConfirmed) {
+        
+            Swal.fire({
+        title: 'Listo!',
+        text: `Gracias por comprar con nosotros ${Swal.getPopup().querySelector(`#name`).value}!`,
+        icon: 'success',
+        confirmButtonColor: 'darkred',
+        color: 'darkred', 
+    background: '#191919',
+    backdrop: `
+      rgba(black, 0.6)
+      left top
+      no-repeat
+    `,
         })
 
         botonComprar.addEventListener(`click`, () =>{
@@ -192,28 +239,16 @@ buy.onclick = function(){
             actualizarCarrito()
         })
 
-        //localStorage.removeItem("Carrito")
+        localStorage.removeItem(`carrito`)
+        }
 
-    }
-  })
-    } else {
-        Swal.fire({
-            title: 'El carrito esta vacio!',
-            text: 'No puedes "Comprar Carrito" si este esta vacio.',
-            icon: 'error',
-            confirmButtonColor: 'darkred',
-            color: 'darkred', // text
-    background: '#191919', // alert backgorund
-    backdrop: `
-      rgba(black, 0.6)
-      left top
-      no-repeat
-    `,// atras del alert
-        })
-    }
-
+    })
+    
+}
+})
 
 }
+
 
 
 
@@ -221,18 +256,17 @@ const delet = document.querySelector("#vaciar-carrito")
 
 delet.onclick = function(){
 
-    if (carrito != 0) {
         Swal.fire({
     title: 'Vaciar?',
     text: "Estas seguro de que quieres vaciar el carrito?",
     icon: 'warning',
-    color: 'darkred', // text
-    background: '#191919', // alert backgorund
+    color: 'darkred', 
+    background: '#191919', 
     backdrop: `
       rgba(black,0.6)
       left top
       no-repeat
-    `,// atras del alert
+    `,
     showCancelButton: true,
     confirmButtonColor: 'dargreen',
     cancelButtonColor: 'darkred',
@@ -246,13 +280,13 @@ delet.onclick = function(){
         text: 'Has vaciado el carrito!',
         icon: 'success',
         confirmButtonColor: 'darkred',
-        color: 'darkred', // text
-    background: '#191919', // alert backgorund
+        color: 'darkred', 
+    background: '#191919', 
     backdrop: `
       rgba(black, 0.6)
       left top
       no-repeat
-    `,// atras del alert
+    `,
         
     })
         botonVaciar.addEventListener(`click`, () =>{
@@ -260,24 +294,8 @@ delet.onclick = function(){
             actualizarCarrito()
         })
         
-        //localStorage.removeItem("Carrito")
+        localStorage.removeItem(`carrito`)
     
     }
   })
-    } else {
-        Swal.fire({
-            title:'El carrito esta vacio!',
-            text:``,
-            icon: 'error',
-            confirmButtonColor: 'darkred',
-            color: 'darkred', // text
-    background: '#191919', // alert backgorund
-    backdrop: `
-      rgba(black, 0.6)
-      left top
-      no-repeat
-    `,// atras del alert
-        })
     }
-
-}
